@@ -8,6 +8,10 @@
     "font-family-name-quotes": "always-unless-keyword",
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
-    "font-weight-notation": "numeric"
+    "font-weight-notation": "numeric",
+    "scss/dollar-variable-empty-line-before": [
+      "always",
+      { "except": "first-nested", "ignore": "after-dollar-variable" }
+    ]
   }
 }
