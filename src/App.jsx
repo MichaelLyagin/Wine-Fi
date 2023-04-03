@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/Header'
 import LoginPage from './pages/LoginPage'
+import MainPage from './pages/MainPage'
 import RegistrationPage from './pages/RegistrationPage'
 
 import './scss/app.scss'
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/login' element={<LoginPage />} />
           <Route path='/registration' element={<RegistrationPage />} />
+          <Route path='' element={<MainPage />} />
         </Routes>
       </main>
     </div>

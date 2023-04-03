@@ -1,0 +1,101 @@
+@import '../../scss/variables';
+
+.product-card {
+  position: relative;
+  width: 245px;
+  height: 360px;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  &__a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 245px !important;
+    height: 360px;
+  }
+
+  &__imgDiv {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__price {
+    width: fit-content;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__counterDiv {
+    z-index: 2;
+    width: fit-content;
+    margin-bottom: 8px;
+  }
+
+  &__priceAndCounter {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__btn {
+    z-index: 3;
+    width: 230px;
+    height: 38px;
+
+    &Div {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-inBasket {
+      width: 230px;
+      height: 38px;
+      background-color: #0cba13;
+
+      &:hover {
+        background-color: #11a30e;
+      }
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover path {
+      fill: $primary;
+    }
+
+    &-active {
+      position: absolute;
+      top: 0;
+      right: 8px;
+      z-index: 1;
+      cursor: pointer;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      & path {
+        fill: $primary;
+      }
+    }
+  }
+}
