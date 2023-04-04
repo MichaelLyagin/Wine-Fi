@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
+import Footer from './components/Footer'
 import Header from './components/Header'
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='' element={<MainPage />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }

@@ -1,11 +1,14 @@
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+
 import './style.scss'
 
-const Logo = ({ color1, color2 }) => {
+const Logo = ({ color1, color2, className }) => {
   return (
     <Link className='logo' to='/'>
       <svg
-        className='logo__img'
+        className={classNames('logo__img', className)}
         width='175'
         height='57'
         viewBox='0 0 175 57'
@@ -23,13 +26,19 @@ const Logo = ({ color1, color2 }) => {
         <path
           d='M172.524 19.6325C172.524 14.9561 170.517 10.4712 166.945 7.16444C163.373 3.85771 158.528 2 153.476 2M165.381 19.6325C165.381 18.1853 165.073 16.7523 164.475 15.4152C163.876 14.0782 163 12.8633 161.894 11.84C160.789 10.8166 159.476 10.0049 158.032 9.45107C156.588 8.89724 155.04 8.61219 153.476 8.61219M158.238 19.6325C158.238 18.4634 157.736 17.3422 156.843 16.5155C155.95 15.6888 154.739 15.2244 153.476 15.2244'
           stroke={color2}
-          stroke-width='3'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='3'
+          strokeLinecap='round'
+          strokeLinejoin='round'
         />
       </svg>
     </Link>
   )
+}
+
+Logo.propTypes = {
+  color1: PropTypes.string,
+  color2: PropTypes.string,
+  className: PropTypes.string,
 }
 
 Logo.defaultProps = {

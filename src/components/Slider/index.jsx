@@ -4,11 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import slides from './img.json'
 
 // Import Swiper styles
-import './style.scss'
 import 'swiper/css'
 import 'swiper/scss/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+
+import './style.scss'
 
 const Slider = () => {
   return (
@@ -28,7 +29,7 @@ const Slider = () => {
         scrollbar={{ draggable: true }}
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.image} alt=''>
+          <SwiperSlide key={slide.image} alt='Слайдер'>
             <img className='slider__img' src={slide.image} alt='Слайд' />
           </SwiperSlide>
         ))}
@@ -36,5 +37,5 @@ const Slider = () => {
     </div>
   )
 }
-console.log(slides) // eslint-disable-line no-console
+
 export default Slider

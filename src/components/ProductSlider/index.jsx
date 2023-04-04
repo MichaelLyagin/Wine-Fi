@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useMediaQuery } from 'react-responsive'
 import { Navigation, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -5,12 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import products from './products.json'
 import ProductCard from '../../components/ProductCard'
 
-// Import Swiper styles
 import './style.scss'
-import 'swiper/css'
-import 'swiper/scss/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 
 const ProductSlider = ({ topic }) => {
   const Small = useMediaQuery({ query: '(max-width: 525px)' })
@@ -47,6 +43,10 @@ const ProductSlider = ({ topic }) => {
       </Swiper>
     </div>
   )
+}
+
+ProductSlider.propTypes = {
+  topic: PropTypes.string,
 }
 
 export default ProductSlider

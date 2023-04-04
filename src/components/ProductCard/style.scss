@@ -19,7 +19,7 @@
     height: 360px;
   }
 
-  &__imgDiv {
+  &__img-div {
     width: 100%;
     height: 200px;
     margin-bottom: 15px;
@@ -39,13 +39,13 @@
     font-weight: 400;
   }
 
-  &__counterDiv {
+  &__counter-div {
     z-index: 2;
     width: fit-content;
     margin-bottom: 8px;
   }
 
-  &__priceAndCounter {
+  &__price-and-counter {
     z-index: 2;
     display: flex;
     align-items: center;
@@ -58,18 +58,19 @@
     width: 230px;
     height: 38px;
 
-    &Div {
+    &-div {
       position: relative;
       z-index: 2;
     }
 
-    &-inBasket {
+    &-in-basket {
       width: 230px;
       height: 38px;
-      background-color: #0cba13;
+      background-color: $green;
+      transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #11a30e;
+        background-color: $dark-green;
       }
     }
   }
@@ -81,6 +82,11 @@
     z-index: 2;
     cursor: pointer;
 
+    & path {
+      fill: $text;
+      transition: fill 0.3s ease;
+    }
+
     &:hover path {
       fill: $primary;
     }
@@ -91,6 +97,7 @@
       right: 8px;
       z-index: 1;
       cursor: pointer;
+      transition: background-color 0.3s ease;
 
       /* stylelint-disable-next-line no-descending-specificity */
       & path {

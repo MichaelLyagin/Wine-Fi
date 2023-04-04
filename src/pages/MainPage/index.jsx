@@ -1,10 +1,7 @@
 import Container from '../../components/Container'
-import Footer from '../../components/Footer'
 import ProductSlider from '../../components/ProductSlider'
 import Search from '../../components/Search'
 import Slider from '../../components/Slider'
-
-import './style.scss'
 
 const MainPage = () => {
   return (
@@ -14,7 +11,6 @@ const MainPage = () => {
         <Slider />
         <ProductSlider topic='Рекомендуем приобрести' />
         <ProductSlider topic='Популярное' />
-        <Footer />
       </Container>
     </div>
   )

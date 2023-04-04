@@ -1,7 +1,6 @@
 @import '../../scss/variables';
 
 .counter {
-  /* position: absolute; */
   right: 5px;
   bottom: 70px;
   display: flex;
@@ -9,12 +8,12 @@
   justify-content: space-between;
   width: 82px;
 
-  &__plusDiv {
+  &__plus-div {
     display: block;
     margin-left: 5px;
   }
 
-  &__minusDiv {
+  &__minus-div {
     display: block;
     margin-right: 5px;
   }
@@ -23,6 +22,11 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+
+    & path {
+      fill: $text;
+      transition: fill 0.3s ease;
+    }
 
     &:hover path {
       fill: $primary;
@@ -33,6 +37,12 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    & path {
+      fill: $text;
+      transition: fill 0.3s ease;
+    }
 
     &:hover path {
       fill: $primary;
