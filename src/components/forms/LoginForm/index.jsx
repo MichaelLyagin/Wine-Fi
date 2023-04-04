@@ -18,7 +18,7 @@ const LoginForm = ({ setServerError }) => {
       navigate('/')
     } catch (error) {
       if (error.field) {
-        setError(error.field, { type: 'custom', message: error.message })
+        setError(error.field, { type: 'custom', message: error.detail })
       } else {
         setServerError('Непредвиденная ошибка')
       }
