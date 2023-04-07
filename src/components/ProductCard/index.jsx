@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 import Button from '../Button'
@@ -47,9 +48,9 @@ const ProductCard = ({
 
       <div onClick={changeLike}>
         <LikeIcon
-          className={
-            isLiked ? 'product-card__like-active' : 'product-card__like'
-          }
+          className={classNames('product-card__like', {
+            'product-card__like_active': isLiked,
+          })}
         />
       </div>
 
@@ -64,15 +65,14 @@ const ProductCard = ({
         </div>
       </div>
 
-      <div onClick={changeAdd} className='product-card__btn-div'>
-        <Button
-          className={
-            isAdded ? 'product-card__btn-in-basket' : 'product-card__btn'
-          }
-        >
-          {isAdded ? 'В корзине' : 'В корзину'}
-        </Button>
-      </div>
+      <Button
+        className={classNames('product-card__btn', {
+          'product-card__btn_in-basket': isAdded,
+        })}
+        onClick={changeAdd}
+      >
+        {isAdded ? 'В корзине' : 'В корзину'}
+      </Button>
     </div>
   )
 }

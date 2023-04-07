@@ -1,10 +1,13 @@
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
+
 import LoupeIcon from '../icons/LoupeIcon'
 
 import './style.scss'
 
-const Search = () => {
+const Search = ({ className }) => {
   return (
-    <div className='search'>
+    <div className={classNames('search', className)}>
       <input
         className='search__input'
         type='text'
@@ -15,6 +18,10 @@ const Search = () => {
       </button>
     </div>
   )
+}
+
+Search.propTypes = {
+  className: PropTypes.string,
 }
 
 export default Search
