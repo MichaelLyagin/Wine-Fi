@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8000/api'
+const HOST_URL = 'http://localhost:8000'
+const API_URL = `${HOST_URL}/api`
 
 const publicApi = axios.create({
   baseURL: API_URL,
@@ -45,4 +46,4 @@ authApi.interceptors.response.use(
   }
 )
 
-export { publicApi, withCredentialsApi, authApi }
+export { HOST_URL, API_URL, publicApi, withCredentialsApi, authApi }
