@@ -8,9 +8,11 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 1120,
+    "actualPrice": 1120,
+    "price": 1232,
     "like": false,
-    "added": false
+    "added": false,
+    "discount": 10
   },
   {
     "id": 2,
@@ -21,7 +23,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 1420,
+    "actualPrice": 1420,
     "like": false,
     "added": false
   },
@@ -34,9 +36,11 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 1020,
+    "actualPrice": 1020,
+    "price": 1224,
     "like": false,
-    "added": false
+    "added": false,
+    "discount": 20
   },
   {
     "id": 4,
@@ -47,7 +51,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 1820,
+    "actualPrice": 1820,
     "like": false,
     "added": false
   },
@@ -60,7 +64,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 1920,
+    "actualPrice": 1920,
     "like": false,
     "added": false
   },
@@ -73,7 +77,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 2030,
+    "actualPrice": 2030,
     "like": false,
     "added": false
   },
@@ -86,7 +90,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 2030,
+    "actualPrice": 2030,
     "like": false,
     "added": false
   },
@@ -99,7 +103,7 @@
     "sweetness": "полусладкое",
     "country": "Россия",
     "volume": 0.75,
-    "price": 2030,
+    "actualPrice": 2030,
     "like": false,
     "added": false
   }

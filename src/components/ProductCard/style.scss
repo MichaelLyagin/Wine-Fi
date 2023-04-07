@@ -3,6 +3,7 @@
 .product-card {
   position: relative;
   width: 230px;
+  height: 353px;
   cursor: pointer;
 
   &__a {
@@ -22,22 +23,29 @@
   }
 
   &__description {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     font-size: 16px;
     font-weight: 300;
   }
 
   &__price {
+    display: flex;
+    flex-direction: column;
     width: fit-content;
-    margin-bottom: 15px;
     font-size: 20px;
     font-weight: 400;
+  }
+
+  &__old-price {
+    margin: 6px 0 0;
+    font-size: 16px;
+    color: $gray;
+    text-decoration: line-through;
   }
 
   &__counter-div {
     z-index: 2;
     width: fit-content;
-    margin-bottom: 8px;
   }
 
   &__price-and-counter {
@@ -46,10 +54,13 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 42px;
   }
 
   &__btn {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: 2;
     width: 100%;
     height: 38px;
@@ -62,6 +73,17 @@
         background-color: $dark-green;
       }
     }
+  }
+
+  &__discount {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    padding: 5px 6px;
+    font-size: 20px;
+    color: $text-light;
+    background-color: $primary;
+    border-radius: 7px;
   }
 
   &__like {

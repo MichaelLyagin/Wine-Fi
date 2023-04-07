@@ -17,9 +17,11 @@ const ProductCard = ({
   sweetness,
   country,
   volume,
+  actualPrice,
   price,
   like,
   added,
+  discount,
 }) => {
   const [isAdded, setAdd] = useState(added)
   const [isLiked, setLike] = useState(like)
@@ -46,6 +48,10 @@ const ProductCard = ({
         />
       </div>
 
+      {discount ? (
+        <div className='product-card__discount'>-{discount}%</div>
+      ) : null}
+
       <div onClick={changeLike}>
         <LikeIcon
           className={classNames('product-card__like', {
@@ -59,7 +65,12 @@ const ProductCard = ({
       </div>
 
       <div className='product-card__price-and-counter'>
-        <div className='product-card__price'>{price} ₽/шт.</div>
+        <div className='product-card__price'>
+          {actualPrice} ₽/шт.
+          {discount ? (
+            <span className='product-card__old-price'>{price} ₽/шт.</span>
+          ) : null}
+        </div>
         <div className='product-card__counter-div'>
           {isAdded ? <Counter /> : null}
         </div>
