@@ -2,13 +2,14 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Navigation } from 'swiper'
 
-import products from './products.json'
 import ProductCard from '../../../components/ProductCard'
+import ErrorIndicator from '../../ErrorIndicator'
+import Spinner from '../../Spinner'
 import Slider from '../Slider'
 
 import './style.scss'
 
-const ProductSlider = ({ topic, className }) => {
+const ProductSlider = ({ products, topic, loading, error, className }) => {
   const config = {
     modules: [Navigation],
     navigation: true,
@@ -39,15 +40,32 @@ const ProductSlider = ({ topic, className }) => {
   return (
     <div className={classNames('product-slider', className)}>
       <div className='product-slider__topic'>{topic}</div>
-      <Slider items={products} config={config}>
-        {(product) => <ProductCard {...product} />}
-      </Slider>
+      <div
+        className={classNames('product-slider__wrapper', {
+          'product-slider__wrapper_not-loaded': loading || error,
+        })}
+      >
+        {loading ? <Spinner /> : null}
+        {error ? <ErrorIndicator /> : null}
+        {!(loading || error) ? (
+          <Slider
+            className='product-slider__slider'
+            items={products}
+            config={config}
+          >
+            {(product) => <ProductCard {...product} />}
+          </Slider>
+        ) : null}
+      </div>
     </div>
   )
 }
 
 ProductSlider.propTypes = {
-  topic: PropTypes.string,
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  topic: PropTypes.string.isRequired,
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
   className: PropTypes.string,
 }
 

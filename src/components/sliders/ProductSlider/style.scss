@@ -29,4 +29,16 @@
       font-size: 20px;
     }
   }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 353px;
+    border-radius: 10px;
+
+    &_not-loaded {
+      background-color: $light-gray;
+    }
+  }
 }

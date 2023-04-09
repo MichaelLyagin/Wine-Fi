@@ -2,7 +2,7 @@ import { HOST_URL, publicApi } from '../api'
 
 class BannerService {
   static async getBanners() {
-    const res = await publicApi.get('/banners')
+    const res = await publicApi.get('/main/banners')
 
     return res.data.map((banner) => {
       banner.image = `${HOST_URL}${banner.image}`

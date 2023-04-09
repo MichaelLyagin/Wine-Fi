@@ -1,4 +1,5 @@
 import BannerSlider from './BannerSlider'
-import ProductSlider from './ProductSlider'
+import DiscountedProductsSlider from './DiscountedProductsSlider'
+import PopularProductsSlider from './PopularProductsSlider'
 
-export { BannerSlider, ProductSlider }
+export { BannerSlider, PopularProductsSlider, DiscountedProductsSlider }

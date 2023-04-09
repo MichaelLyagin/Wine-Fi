@@ -10,21 +10,18 @@ import LikeIcon from '../icons/LikeIcon'
 import './style.scss'
 
 const ProductCard = ({
-  imgSrc,
-  type,
+  image,
   name,
   color,
-  sweetness,
+  sugarType,
   country,
   volume,
   actualPrice,
   price,
-  like,
-  added,
   discount,
 }) => {
-  const [isAdded, setAdd] = useState(added)
-  const [isLiked, setLike] = useState(like)
+  const [isAdded, setAdd] = useState(false)
+  const [isLiked, setLike] = useState(false)
 
   const changeAdd = () => {
     setAdd((isAdded) => !isAdded)
@@ -43,7 +40,7 @@ const ProductCard = ({
       <div className='product-card__img-div'>
         <img
           className='product-card__img'
-          src={imgSrc}
+          src={image}
           alt='Изображение товара'
         />
       </div>
@@ -61,7 +58,7 @@ const ProductCard = ({
       </div>
 
       <div className='product-card__description'>
-        {type} {name} {color} {sweetness}, {country}, {volume} л.
+        {name} {color} {sugarType}, {country}, {volume} л.
       </div>
 
       <div className='product-card__price-and-counter'>
