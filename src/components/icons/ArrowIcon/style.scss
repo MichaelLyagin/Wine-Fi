@@ -1,0 +1,13 @@
+@import '../../../scss/variables';
+
+.arrow-icon {
+  & path {
+    transition: fill 0.5s ease;
+  }
+
+  &:hover {
+    & path {
+      fill: $text;
+    }
+  }
+}

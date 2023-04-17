@@ -1,0 +1,94 @@
+@import '../../scss/variables';
+
+.pagination {
+  &__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 40px;
+
+    @media (max-width: 1080px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: 1fr;
+    }
+
+    &__product {
+      width: 230px;
+      margin: 20px;
+      @media (max-width: 800px) {
+        justify-self: center;
+      }
+    }
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.pagination_number {
+  display: flex;
+  justify-content: center;
+
+  /* Номера страниц */
+  & li {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 500px;
+    color: $gray;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid $gray;
+    border-radius: 5px;
+    transition: all 1s ease;
+
+    @media (max-width: 800px) {
+      margin: 5px;
+    }
+
+    &.previous,
+    &.next {
+      width: 30px;
+      padding-top: 7px;
+      margin: 10px 0;
+      border: none;
+      @media (max-width: 800px) {
+        margin: 5px 0;
+      }
+    }
+
+    &.next {
+      text-align: left;
+    }
+
+    &.previous {
+      text-align: right;
+    }
+
+    &.previous:hover,
+    &.next:hover {
+      border: none;
+    }
+
+    &:hover,
+    &.selected {
+      color: $dark-primary;
+      border: 2px solid $dark-primary;
+    }
+
+    & a {
+      margin: 0 auto;
+    }
+  }
+}
+
+.next-icon {
+  rotate: (-90deg);
+}
+
+.previous-icon {
+  rotate: (90deg);
+}

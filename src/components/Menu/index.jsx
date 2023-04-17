@@ -28,7 +28,7 @@ const Menu = ({ className }) => {
       <nav className={menuOpen ? 'menu__body menu__body_open' : 'menu__body'}>
         <ul className='menu__list' onClick={onLinkClick}>
           <li className='menu__item'>
-            <Link className='menu__link' to='##'>
+            <Link className='menu__link' to='/catalog'>
               Каталог
             </Link>
           </li>

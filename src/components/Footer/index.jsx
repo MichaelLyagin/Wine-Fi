@@ -13,7 +13,7 @@ const Footer = () => {
         <div className='footer__time'>
           <b className='footer__bold'>Режим работы:</b>
           <br />
-          8:00 - 22:00 Без выходных.
+          10:00 - 22:00 Без выходных.
         </div>
         <div className='footer__address'>
           <b className='footer__bold'>Адрес магазина:</b>
